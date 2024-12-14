@@ -1,9 +1,8 @@
-import Background from '../../assets/logo.png'
-import styled from 'styled-components'
-import { useState } from 'react'
+import Background from '../../assets/logo.png';
+import styled from 'styled-components';
+import { useState } from 'react';
 
 export const Header = () => {
-
   const [active, setActive] = useState<boolean>(false);
 
   const toggleActive = () => {
@@ -22,10 +21,9 @@ export const Header = () => {
             <Item>Contact</Item>
           </Ul>
           <BurguerBtn className="material-icons-outlined burguer" onClick={toggleActive}>
-menu
-</BurguerBtn>
+            menu
+          </BurguerBtn>
         </nav>
-        {/* Div para o menu aberto */}
 
           <Menu active={active}>
           <div className='close-div'>
@@ -89,17 +87,10 @@ const Item = styled.li`
   }
 `
 
-// const MenuOverlay = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `
-
 interface MenuProps {
   active: boolean;
 }
 
-// Menu com os itens do menu
 const Menu = styled.div<MenuProps>`
   background: #29e094;
   position: fixed;
